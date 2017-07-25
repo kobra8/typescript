@@ -13,7 +13,7 @@ function reset() {
 reset();
 console.log(variable)
 
-//Arrow dunctions
+//Arrow functions
 console.log("Arrow function");
 const addNumbers = function(number1: number, number2: number): number{
     return number1 + number2

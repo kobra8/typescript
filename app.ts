@@ -47,3 +47,13 @@ console.log("Hob1:" + hobby1, "Hob2:" + hobby2);
 const myPerson = {myName: "Jerzy", age: 42}
 const {myName, age} = myPerson;
 console.log(myName, age);
+
+console.log("Template literals:");
+const userName = "Jurek Drobot";
+console.log(
+    `
+    Moje username wyświetlam poniżej:
+    Username: ${userName}
+    OK :)
+    `
+)

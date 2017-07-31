@@ -41,4 +41,7 @@ console.log("Hob1:" + hobby1, "Hob2:" + hobby2);
 var myPerson = { myName: "Jerzy", age: 42 };
 var myName = myPerson.myName, age = myPerson.age;
 console.log(myName, age);
+console.log("Template literals:");
+var userName = "Jurek Drobot";
+console.log("\n    Moje username wy\u015Bwietlam poni\u017Cej:\n    Username: " + userName + "\n    OK :)\n    ");
 //# sourceMappingURL=app.js.map

@@ -44,4 +44,29 @@ console.log(myName, age);
 console.log("Template literals:");
 var userName = "Jurek Drobot";
 console.log("\n    Moje username wy\u015Bwietlam poni\u017Cej:\n    Username: " + userName + "\n    OK :)\n    ");
+var Person = (function () {
+    function Person(name, username) {
+        this.username = username;
+        this.age = 42;
+        this.name = name;
+    }
+    Person.prototype.printAge = function () {
+        console.log(this.age);
+        this.setUsername("kobra88");
+    };
+    Person.prototype.setType = function (type) {
+        this.type = type;
+        console.log(this.type);
+    };
+    Person.prototype.setUsername = function (username) {
+        this.username = username;
+    };
+    return Person;
+}());
+var person = new Person("Jerzy", "kobra8");
+console.log(person);
+console.log(person.name, person.username);
+person.printAge();
+person.setType("Fajny gość");
+console.log("Nowa wartość username: " + person.username);
 //# sourceMappingURL=app.js.map

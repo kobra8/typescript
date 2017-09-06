@@ -57,3 +57,35 @@ console.log(
     OK :)
     `
 )
+
+class Person {
+    name: string;
+    private type: string;
+    protected age: number = 42;
+
+    constructor(
+        name: string,
+        public username: string
+    ) {
+        this.name = name;
+    }
+    printAge() {
+        console.log(this.age);
+        this.setUsername("kobra88");
+    }
+   
+    setType(type: string) {
+        this.type = type;
+        console.log(this.type);
+    }
+    private setUsername(username: string) {
+        this.username = username
+    }
+}
+
+const person = new Person("Jerzy", "kobra8");
+console.log(person);
+console.log(person.name, person.username);
+person.printAge();
+person.setType("Fajny gość");
+console.log("Nowa wartość username: " + person.username);

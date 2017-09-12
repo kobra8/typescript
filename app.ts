@@ -1,8 +1,8 @@
 
 let variable = "Value";
-console.log(variable); 
-variable =  "Another value"
-console.log(variable); 
+console.log(variable);
+variable = "Another value"
+console.log(variable);
 
 //Block scope
 
@@ -15,14 +15,15 @@ console.log(variable)
 
 //Arrow functions
 console.log("Arrow function");
-const addNumbers = function(number1: number, number2: number): number{
+const addNumbers = function (number1: number, number2: number): number {
     return number1 + number2
 };
-console.log(addNumbers(10,3));
+console.log(addNumbers(10, 3));
 
 const multiplyNumbers = (number1: number, number2: number) => {
-    return number1 * number2 };
-    console.log(multiplyNumbers(10,3));
+    return number1 * number2
+};
+console.log(multiplyNumbers(10, 3));
 
 const greetings = () => "Greetings ";
 console.log(greetings());
@@ -44,8 +45,8 @@ const hobbies = ["Railways", "Mountains"];
 const [hobby1, hobby2] = hobbies;
 console.log("Hob1:" + hobby1, "Hob2:" + hobby2);
 
-const myPerson = {myName: "Jerzy", age: 42}
-const {myName, age} = myPerson;
+const myPerson = { myName: "Jerzy", age: 42 }
+const { myName, age } = myPerson;
 console.log(myName, age);
 
 console.log("Template literals:");
@@ -73,7 +74,7 @@ class Person {
         console.log(this.age);
         this.setUsername("kobra88");
     }
-   
+
     setType(type: string) {
         this.type = type;
         console.log(this.type);
@@ -89,3 +90,35 @@ console.log(person.name, person.username);
 person.printAge();
 person.setType("Fajny gość");
 console.log("Nowa wartość username: " + person.username);
+// Inheritance
+
+class Max extends Person {
+    // name = "Max"
+    constructor(username: string) {
+        super("Max", username)
+        this.age = 35;
+    }
+}
+const max = new Max("max");
+console.log(max)
+
+//Getters & setters
+class Plant {
+    private _species: string = "Default";
+
+    get species() {
+        return this._species;
+    }
+    set species(value: string) {
+        if (value.length > 3) {
+            this._species = value;
+        }
+        else {
+            this._species = "Default"
+        }
+    }
+}
+let plant = new Plant();
+console.log(plant.species);
+plant.species = "Green";
+console.log(plant.species);

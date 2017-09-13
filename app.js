@@ -118,4 +118,42 @@ var plant = new Plant();
 console.log(plant.species);
 plant.species = "Green";
 console.log(plant.species);
+//Static properthies and Methods
+var Helpers = (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircumference = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircumference(8));
+//Abstract Classes
+var Project = (function () {
+    function Project() {
+        this.projectName = "Default";
+        this.budget = 1000;
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget = this.budget * 2;
+    };
+    return Project;
+}());
+var ITProject = (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+var newProject = new ITProject();
+console.log(newProject);
+newProject.changeName("Super IT Project");
+newProject.calcBudget();
+console.log(newProject);
 //# sourceMappingURL=app.js.map

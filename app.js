@@ -156,4 +156,21 @@ console.log(newProject);
 newProject.changeName("Super IT Project");
 newProject.calcBudget();
 console.log(newProject);
+//private constructors - singletone
+var OnlyOne = (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    ;
+    OnlyOne.getInstance = function () {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne("The Only One");
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+var right = OnlyOne.getInstance();
+console.log(right.name);
+//right.name = "XYZ0" -> It works when deleted "readonly" in the class constructor
 //# sourceMappingURL=app.js.map

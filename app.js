@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8,6 +9,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+Object.defineProperty(exports, "__esModule", { value: true });
 var variable = "Value";
 console.log(variable);
 variable = "Another value";
@@ -173,4 +175,7 @@ var OnlyOne = (function () {
 var right = OnlyOne.getInstance();
 console.log(right.name);
 //right.name = "XYZ0" -> It works when deleted "readonly" in the class constructor
+//TS with jQuery
+require("jQuery");
+$("#app").css({ "background-color": "green" });
 //# sourceMappingURL=app.js.map

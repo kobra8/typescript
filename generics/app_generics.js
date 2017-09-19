@@ -25,6 +25,7 @@ var echo2 = betterEcho;
 console.log(echo2("Something"));
 //Generic class
 //W przykładzie Constraints czyli ograniczenia jakie typy mogą być przypisane do <T>
+//Dodatkowo można ustalic który typ będzie odpowiadał do okreśklonej zmiennej i w jakiej kolejności
 var SimpleMath = (function () {
     function SimpleMath() {
     }

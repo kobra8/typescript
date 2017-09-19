@@ -172,3 +172,6 @@ let right = OnlyOne.getInstance();
 console.log(right.name);
 //right.name = "XYZ0" -> It works when deleted "readonly" in the class constructor
 
+//TS with jQuery
+import "jQuery";
+$("#app").css({"background-color": "green"});

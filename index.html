@@ -1,16 +1,30 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TypeScript App</title>
-      <script src="app_generics.js"></script> 
-      <!-- <script src="node_modules/systemjs/dist/system.js"></script>  -->
-     <!-- <script src="exercises_class.js"></script>  -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>TypeScript App</title>
+      <!-- <script src="app.js"></script>  -->
+      <script src="node_modules/systemjs/dist/system.js"></script>
+      <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+      <!-- <script src="exercises_class.js"></script>  -->
 </head>
+
 <body>
+      <div id="app">Change it with jQuery</div>
+      <!-- This script systemJS map jQuery import-->
+      <script>
+            SystemJS.config({
+                  map: {
+                        "jQuery": "node_modules/jquery/dist/jquery.min.js"
+                  },
+                  baseUrl: '/',
+                  defaultExtension: true
+            });
+            SystemJS.import('app.js');
+      </script>
       <!-- This script i used only for loading modules by systemJS -->
       <!-- <script>
       SystemJS.config({
@@ -23,6 +37,7 @@
       });
       SystemJS.import('app_modules.js')
       </script> -->
-TS
+      TS
 </body>
+
 </html>

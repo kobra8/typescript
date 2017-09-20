@@ -26,7 +26,7 @@ console.log(echo2("Something"));
 //Generic class
 //W przykładzie Constraints czyli ograniczenia jakie typy mogą być przypisane do <T>
 //Dodatkowo można ustalic który typ będzie odpowiadał do okreśklonej zmiennej i w jakiej kolejności
-var SimpleMath = (function () {
+var SimpleMath = /** @class */ (function () {
     function SimpleMath() {
     }
     SimpleMath.prototype.calculate = function () {
@@ -38,4 +38,3 @@ var simpleMath = new SimpleMath();
 simpleMath.baseValue = "10";
 simpleMath.multiplyValue = 20;
 console.log(simpleMath.calculate());
-//# sourceMappingURL=app_generics.js.map

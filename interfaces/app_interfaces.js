@@ -16,7 +16,7 @@ greet(person3);
 changeName(person3);
 greet(person3);
 person3.greet("Zlasu");
-var Human = (function () {
+var Human = /** @class */ (function () {
     function Human() {
     }
     Human.prototype.greet = function (lastName) {
@@ -40,4 +40,3 @@ var oldPerson = {
     }
 };
 console.log(oldPerson);
-//# sourceMappingURL=app_interfaces.js.map

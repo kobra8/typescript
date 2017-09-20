@@ -1,13 +1,19 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+     //   "module": "commonjs",
         "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": true,
-        "noEmitOnError": true,
-        "experimentalDecorators": true
-    },
-    "exclude": [
-        "node_modules"
-    ]
+       "noImplicitAny": false,
+     //   "sourceMap": true,
+     //   "noEmitOnError": true,
+        "experimentalDecorators": true,
+        "lib": ["es2015", "es2017", "dom"]
+    }
+    // Jakie pliki będzie kompilować
+    // "files": [
+    //     "app.ts"
+    // ]
+    // Poniżej będzi kompilować wszystkie oprócz wymienionych
+    // "exclude": [
+    //     "node_modules"
+    // ]
 }

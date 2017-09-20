@@ -8,11 +8,20 @@
     "systemjs": "^0.20.18"
   },
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "@types/jquery": "^3.2.12",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.2",
+    "lite-server": "^2.2.2",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "gulp": "gulp",
+    "build" : "webpack -d --watch",
+    "build:prod" : "webpack -p"
   },
   "author": "",
   "license": "ISC"

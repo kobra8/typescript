@@ -5,4 +5,3 @@ var MyMath;
     }
     MyMath.calculateRectangle = calculateRectangle;
 })(MyMath || (MyMath = {}));
-//# sourceMappingURL=rectangleMath.js.map

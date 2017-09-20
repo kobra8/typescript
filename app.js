@@ -56,7 +56,7 @@ console.log(myName, age);
 console.log("Template literals:");
 var userName = "Jurek Drobot";
 console.log("\n    Moje username wy\u015Bwietlam poni\u017Cej:\n    Username: " + userName + "\n    OK :)\n    ");
-var Person = (function () {
+var Person = /** @class */ (function () {
     function Person(name, username) {
         this.username = username;
         this.age = 42;
@@ -82,7 +82,7 @@ person.printAge();
 person.setType("Fajny gość");
 console.log("Nowa wartość username: " + person.username);
 // Inheritance
-var Max = (function (_super) {
+var Max = /** @class */ (function (_super) {
     __extends(Max, _super);
     // name = "Max"
     function Max(username) {
@@ -95,7 +95,7 @@ var Max = (function (_super) {
 var max = new Max("max");
 console.log(max);
 //Getters & setters
-var Plant = (function () {
+var Plant = /** @class */ (function () {
     function Plant() {
         this._species = "Default";
     }
@@ -121,7 +121,7 @@ console.log(plant.species);
 plant.species = "Green";
 console.log(plant.species);
 //Static properthies and Methods
-var Helpers = (function () {
+var Helpers = /** @class */ (function () {
     function Helpers() {
     }
     Helpers.calcCircumference = function (diameter) {
@@ -133,7 +133,7 @@ var Helpers = (function () {
 console.log(2 * Helpers.PI);
 console.log(Helpers.calcCircumference(8));
 //Abstract Classes
-var Project = (function () {
+var Project = /** @class */ (function () {
     function Project() {
         this.projectName = "Default";
         this.budget = 1000;
@@ -143,7 +143,7 @@ var Project = (function () {
     };
     return Project;
 }());
-var ITProject = (function (_super) {
+var ITProject = /** @class */ (function (_super) {
     __extends(ITProject, _super);
     function ITProject() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -159,7 +159,7 @@ newProject.changeName("Super IT Project");
 newProject.calcBudget();
 console.log(newProject);
 //private constructors - singletone
-var OnlyOne = (function () {
+var OnlyOne = /** @class */ (function () {
     function OnlyOne(name) {
         this.name = name;
     }
@@ -176,6 +176,6 @@ var right = OnlyOne.getInstance();
 console.log(right.name);
 //right.name = "XYZ0" -> It works when deleted "readonly" in the class constructor
 //TS with jQuery
-require("jQuery");
+//import "jQuery"; //When system JS used
+var $ = require("jquery");
 $("#app").css({ "background-color": "green" });
-//# sourceMappingURL=app.js.map

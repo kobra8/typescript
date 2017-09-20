@@ -7,15 +7,17 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>TypeScript App</title>
       <!-- <script src="app.js"></script>  -->
-      <script src="node_modules/systemjs/dist/system.js"></script>
-      <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+      <!-- <script src="node_modules/systemjs/dist/system.js"></script> -->
       <!-- <script src="exercises_class.js"></script>  -->
 </head>
 
 <body>
       <div id="app">Change it with jQuery</div>
-      <!-- This script systemJS map jQuery import-->
-      <script>
+      
+      
+      
+      <!-- <script>
+            // This script is used for loading jQuery by systemJS in map command
             SystemJS.config({
                   map: {
                         "jQuery": "node_modules/jquery/dist/jquery.min.js"
@@ -24,20 +26,23 @@
                   defaultExtension: true
             });
             SystemJS.import('app.js');
-      </script>
-      <!-- This script i used only for loading modules by systemJS -->
-      <!-- <script>
-      SystemJS.config({
-            baseUrl: '/',
-            packages:{
-                  '/': {
-                        defaultExtension: 'js'
+            // This script is used only for loading modules by systemJS
+            /*
+            SystemJS.config({
+                  baseUrl: '/',
+                  packages:{
+                        '/': {
+                              defaultExtension: 'js'
+                        }
                   }
-            }
-      });
-      SystemJS.import('app_modules.js')
+            });
+            SystemJS.import('app_modules.js')
+            */
       </script> -->
+      
+      
       TS
+      <script src="bundle.js"></script> 
 </body>
 
 </html>

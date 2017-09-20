@@ -173,5 +173,6 @@ console.log(right.name);
 //right.name = "XYZ0" -> It works when deleted "readonly" in the class constructor
 
 //TS with jQuery
-import "jQuery";
+//import "jQuery"; //When system JS used
+import $ = require("jquery");
 $("#app").css({"background-color": "green"});

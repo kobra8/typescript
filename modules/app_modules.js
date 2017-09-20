@@ -5,4 +5,3 @@ var rectangle_1 = require("./rectangle");
 console.log(Circle.PI);
 console.log(Circle.calculateCircumference(3));
 console.log(rectangle_1.default(10, 20));
-//# sourceMappingURL=app_modules.js.map

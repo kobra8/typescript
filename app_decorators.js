@@ -10,7 +10,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 function logged(constructorFn) {
     console.log(constructorFn);
 }
-var User = (function () {
+var User = /** @class */ (function () {
     function User() {
         console.log("Hi");
     }
@@ -23,7 +23,7 @@ var User = (function () {
 function logging(value) {
     return value ? logged : null;
 }
-var Machine = (function () {
+var Machine = /** @class */ (function () {
     function Machine() {
     }
     Machine = __decorate([
@@ -37,7 +37,7 @@ function printable(constructorFn) {
         console.log(this);
     };
 }
-var Tree = (function () {
+var Tree = /** @class */ (function () {
     function Tree() {
         this.name = "Green tree";
     }
@@ -65,7 +65,7 @@ function overwritable(value) {
         return newDescriptor;
     };
 }
-var Proj = (function () {
+var Proj = /** @class */ (function () {
     function Proj(name) {
         //Ten dekorator blokuje nadpisanie właściwości projectName ale blokuje też konstruktor tworzący projectName
         this.projectName = "ABC";
@@ -97,7 +97,7 @@ function printInfo(target, methodName, paramIndex) {
     console.log("Method name: ", methodName);
     console.log("Param index: ", paramIndex);
 }
-var Course = (function () {
+var Course = /** @class */ (function () {
     function Course(name) {
         this.name = name;
     }
@@ -117,4 +117,3 @@ var Course = (function () {
 var course = new Course("Super Course");
 course.printStudentNumbers("anything", true);
 course.printStudentNumbers("anything", false);
-//# sourceMappingURL=app_decorators.js.map

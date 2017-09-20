@@ -6,4 +6,3 @@ var MyMath;
     }
     MyMath.calculateCircumference = calculateCircumference;
 })(MyMath || (MyMath = {}));
-//# sourceMappingURL=circleMath.js.map

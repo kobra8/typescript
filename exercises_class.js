@@ -9,7 +9,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 // Exercise 1
-var Car = (function () {
+var Car = /** @class */ (function () {
     function Car(name) {
         this.acceleration = 0;
         this.name = name;
@@ -32,14 +32,14 @@ console.log(car.getAcceleration());
 car.accelerate(10);
 console.log(car.getAcceleration());
 // Exercise 2
-var BaseObject = (function () {
+var BaseObject = /** @class */ (function () {
     function BaseObject() {
         this.width = 0;
         this.length = 0;
     }
     return BaseObject;
 }());
-var Rectangle = (function (_super) {
+var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
     function Rectangle(width, length) {
         var _this = _super.call(this) || this;
@@ -57,7 +57,7 @@ console.log(myRectangle.calcSize());
 // Exercise 3
 var Persons;
 (function (Persons) {
-    var Person = (function () {
+    var Person = /** @class */ (function () {
         function Person() {
             this._firstName = "";
         }
@@ -86,4 +86,3 @@ person2.firstName = "Ma";
 console.log(person2.firstName);
 person2.firstName = "Maximilian";
 console.log(person2.firstName);
-//# sourceMappingURL=exercises_class.js.map

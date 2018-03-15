@@ -1,4 +1,4 @@
-class Pizzeria {
+export abstract class Pizzeria {
     public static id = 0;
     private id;
     readonly name;
@@ -27,16 +27,11 @@ class Pizzeria {
     private isovenFull() {
         return this.pizzasInOrder.length > this.maxPizzasInOwen;
     }
+
+    public abstract bake()
 }
 
-const laStrada = new Pizzeria("La Strada");
-const americanHouse = new Pizzeria("American House");
-const venezia = new Pizzeria("Venezia");
 
-laStrada.order("Havanian Pizza");
-laStrada.manager;
-laStrada.manager = "Jola Nowak";
 
-console.log(laStrada);
-console.log(americanHouse);
-console.log(venezia);
+
+

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Pizzeria = /** @class */ (function () {
     function Pizzeria(name) {
         this.pizzasInOrder = [];
@@ -26,12 +28,4 @@ var Pizzeria = /** @class */ (function () {
     Pizzeria.id = 0;
     return Pizzeria;
 }());
-var laStrada = new Pizzeria("La Strada");
-var americanHouse = new Pizzeria("American House");
-var venezia = new Pizzeria("Venezia");
-laStrada.order("Havanian Pizza");
-laStrada.manager;
-laStrada.manager = "Jola Nowak";
-console.log(laStrada);
-console.log(americanHouse);
-console.log(venezia);
+exports.Pizzeria = Pizzeria;

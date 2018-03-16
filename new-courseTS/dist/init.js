@@ -6,8 +6,8 @@ var laStrada = new polish_pizzeria_1.PolishPizzeria("La Strada", true);
 var americanHouse = new american_pizzeria_1.AmericanPizzeria("American House");
 var venezia = new polish_pizzeria_1.PolishPizzeria("Venezia", false);
 laStrada.order("Havanian Pizza");
-console.log(laStrada.manager); // Użyty getter -> manager to get manager
-laStrada.manager = "Jola Nowak"; // Użyty setter -> manager to set manager
+console.log(laStrada.manager); // Użyty geter -> manager to get manager
+laStrada.manager = "Jola Nowak"; // Użyty seter -> manager to set manager
 console.log(laStrada);
 console.log(americanHouse);
 console.log(venezia);

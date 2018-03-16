@@ -22,7 +22,7 @@ var Pizzeria = /** @class */ (function () {
     Pizzeria.prototype.order = function (pizza) {
         this.pizzasInOrder.push(pizza);
     };
-    Pizzeria.prototype.isovenFull = function () {
+    Pizzeria.prototype.isOvenFull = function () {
         return this.pizzasInOrder.length > this.maxPizzasInOwen;
     };
     Pizzeria.id = 0;

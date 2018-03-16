@@ -1,7 +1,7 @@
 import {Pizzeria} from './pizzeria';
 
 export class AmericanPizzeria extends Pizzeria {
-    bake() {
+    bake(){
         return 'Pizza is being baked... please wait';
     }
 }

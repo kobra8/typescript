@@ -1,6 +1,6 @@
 export interface Pizza {
     name: string;
-    price: number;
+    price: number | string; //Union type czyli typ nymber lub typ string
     size: string;
     status: Status
 }

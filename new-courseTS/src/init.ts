@@ -11,11 +11,13 @@ const capriciosa = {
     name: "Havanian Pizza", 
     price: 20.90, 
     size: "large",
-    status: Status.Ordered
+    status: Status.Ordered,
+    cancelable: true
 }
 
 laStrada.manager = "Jola Nowak"; // Użyty seter -> manager to set manager
 console.log(laStrada.manager); // Użyty geter -> manager to get manager
 
 venezia.order(capriciosa);
+americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked); //Pizza array index , Status from enum

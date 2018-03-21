@@ -24,14 +24,14 @@ export abstract class Pizzeria implements Orderable {
     }
 
     public getPaymentmethod(payment: PaymentMethod) {
-        switch(payment.type) { // Swith pełni rolę type guarda
+        switch(payment.type) { // Switch pełni rolę type guarda
             case 'cash': return `Paid in cash in ${payment.currency}`;
             case 'debitCard': return `Paid with debit card with code ${payment.code}`;
             case 'onlinePayment': return `Paid online with bak account ${payment.bankAccount}`;
         }
 
         // Alternatywny Type guard w formie if
-        // if(payment.type === "cash") { return `Paid inj cash`}
+        // if(payment.type === "cash") { return `Paid in cash`}
     }
 
     public order(pizza: Pizza) {

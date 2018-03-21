@@ -8,7 +8,7 @@
     "systemjs": "^0.20.18"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.12",
+    "@types/jquery": "^3.3.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
     "lite-server": "^2.2.2",
@@ -20,8 +20,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server",
     "gulp": "gulp",
-    "build" : "webpack -d --watch",
-    "build:prod" : "webpack -p"
+    "build": "webpack -d --watch",
+    "build:prod": "webpack -p"
   },
   "author": "",
   "license": "ISC"

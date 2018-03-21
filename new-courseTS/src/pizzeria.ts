@@ -1,5 +1,5 @@
 import { Orderable } from "./orderable";
-import { Pizza, Status } from "./pizza.model";
+import { Pizza, Status, SizeKey, PaymentMethod } from './pizza.model';
 
 export abstract class Pizzeria implements Orderable {
     public static id= 0;
@@ -23,12 +23,36 @@ export abstract class Pizzeria implements Orderable {
         this._manager = manager;
     }
 
+    public getPaymentmethod(payment: PaymentMethod) {
+        switch(payment.type) { // Swith pełni rolę type guarda
+            case 'cash': return `Paid in cash in ${payment.currency}`;
+            case 'debitCard': return `Paid with debit card with code ${payment.code}`;
+            case 'onlinePayment': return `Paid online with bak account ${payment.bankAccount}`;
+        }
+
+        // Alternatywny Type guard w formie if
+        // if(payment.type === "cash") { return `Paid inj cash`}
+    }
+
     public order(pizza: Pizza) {
         this.pizzasInOrder.push(pizza);
     }
 
     public changeStatus(index: number, status: Status) {
         this.pizzasInOrder[index].status = status;
+    }
+
+    public changeSize(index: number, size: SizeKey) {
+        this.pizzasInOrder[index].size = size;
+    }
+
+    checkPrice({price}: Pizza) {
+        if(typeof price === 'string') { // Type guard
+            console.log("Price is string: ", price.toLocaleLowerCase());
+        }
+        else if (typeof price === "number") { // Type guard
+            console.log("Price is number: ", price.toFixed());
+        }
     }
 
     private isOvenFull() {

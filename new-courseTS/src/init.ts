@@ -23,3 +23,5 @@ venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked); //Pizza array index , Status from enum
 venezia.changeSize(0, "small");
+
+console.log(laStrada);

@@ -1,2 +1,4 @@
 // Application Dependencies
 
+import 'lodash';
+

@@ -1,11 +1,11 @@
+import { Pizza } from './pizza.model';
 import { Pizzeria } from './pizzeria';
-import { Pizza } from "../pizza.model";
-export interface CancelablePizza {
+export interface ICancelablePizza {
     cancelable: boolean;
 }
 export declare class PolishPizzeria extends Pizzeria {
     openAtNight: boolean;
     constructor(name: string, openAtNight: boolean);
-    order(pizza: Pizza & CancelablePizza): void;
     bake(): string;
+    order(pizza: Pizza & ICancelablePizza): void;
 }
